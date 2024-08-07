@@ -60,9 +60,15 @@ const BillForm: React.FC<BillFormProps> = ({
           onChange={(e) => setChurchName(e.target.value)}
           className="w-full p-2 border rounded"
         >
-          <option value="Church A">St. Marks Tamil Church, Vikhroli</option>
-          <option value="Church B">St. Stephens Tamil Church, Bhandup</option>
-          <option value="Church C">Bethel Tamil Church, Chembur</option>
+          <option value="St. Marks Tamil Church, Vikhroli">
+            St. Marks Tamil Church, Vikhroli
+          </option>
+          <option value="St. Stephens Tamil Church, Bhandup">
+            St. Stephens Tamil Church, Bhandup
+          </option>
+          <option value="Bethel Tamil Church, Chembur">
+            Bethel Tamil Church, Chembur
+          </option>
         </select>
       </div>
       <div className="mb-4">

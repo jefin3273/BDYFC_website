@@ -107,17 +107,17 @@ const Receipt: React.FC<ReceiptProps> = ({
       </View>
       <View style={styles.signatures}>
         <View style={styles.signatureBlock}>
-          <Image style={styles.signatureImage} src="../Signature.jpg" />
+          <Image style={styles.signatureImage} src="Signature.jpg" />
           <Text style={styles.signatureName}>Daniel Jebadurai</Text>
           <Text>President</Text>
         </View>
         <View style={styles.signatureBlock}>
-          <Image style={styles.signatureImage} src="../Signature.jpg" />
+          <Image style={styles.signatureImage} src="Signature.jpg" />
           <Text style={styles.signatureName}>Jerom Jebamani</Text>
           <Text>Vice-President</Text>
         </View>
         <View style={styles.signatureBlock}>
-          <Image style={styles.signatureImage} src="../Signature.jpg" />
+          <Image style={styles.signatureImage} src="Signature.jpg" />
           <Text style={styles.signatureName}>Alice Joel Ramanadhula</Text>
           <Text>Secretary</Text>
         </View>
