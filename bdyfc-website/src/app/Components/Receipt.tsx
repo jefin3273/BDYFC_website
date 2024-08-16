@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/alt-text */
+// src/app/Components/Receipt.tsx
 import React from "react";
 import {
   Page,
@@ -12,21 +12,32 @@ import {
 // Define styles
 const styles = StyleSheet.create({
   page: {
+    position: "relative",
     padding: 30,
+    fontSize: 12,
+  },
+  backgroundImage: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    zIndex: -1,
   },
   header: {
     fontSize: 24,
     textAlign: "center",
     marginBottom: 20,
+    fontWeight: "bold",
   },
   receiptTitle: {
     fontSize: 20,
     textAlign: "center",
     marginVertical: 10,
+    fontWeight: "bold",
   },
   section: {
     marginBottom: 10,
-    fontSize: 12,
   },
   bold: {
     fontWeight: "bold",
@@ -46,13 +57,12 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   signatureImage: {
-    width: 250,
-    height: 100,
+    width: 100,
+    height: 50,
     objectFit: "contain",
   },
   signatureName: {
     marginTop: 5,
-    fontSize: 12,
   },
 });
 
@@ -77,49 +87,52 @@ const Receipt: React.FC<ReceiptProps> = ({
 }) => (
   <Document>
     <Page size="A5" style={styles.page}>
-      <Text style={styles.header}>
-        BOMBAY DIOCESAN YOUTH FELLOWSHIP COUNCIL
-      </Text>
-      <View style={styles.line}>
-        <Text style={styles.bold}>Bill Number: {billNumber}</Text>
-        <Text style={styles.bold}>Date: {date}</Text>
-      </View>
-      <Text style={styles.receiptTitle}>RECEIPT</Text>
-      <View style={styles.section}>
-        <Text style={styles.bold}>Received with thanks from:</Text>
-        <Text>{churchName}</Text>
-      </View>
-      <View style={styles.section}>
-        <Text style={styles.bold}>Towards:</Text>
-        <Text>Bombay Diocesan Youth Fellowship Council</Text>
-      </View>
-      <View style={styles.section}>
-        <Text style={styles.bold}>The sum of rupees:</Text>
-        <Text>{amount}</Text>
-      </View>
-      <View style={styles.section}>
-        <Text style={styles.bold}>Payment Method:</Text>
-        <Text>{paymentMethod}</Text>
-      </View>
-      <View style={styles.section}>
-        <Text style={styles.bold}>Transaction ID:</Text>
-        <Text>{transactionId}</Text>
-      </View>
-      <View style={styles.signatures}>
-        <View style={styles.signatureBlock}>
-          <Image style={styles.signatureImage} src="Signature.jpg" />
-          <Text style={styles.signatureName}>Daniel Jebadurai</Text>
-          <Text>President</Text>
+      <Image style={styles.backgroundImage} src="Background.jpg" />
+      <View>
+        <Text style={styles.header}>
+          BOMBAY DIOCESAN YOUTH FELLOWSHIP COUNCIL
+        </Text>
+        <View style={styles.line}>
+          <Text style={styles.bold}>Bill Number: {billNumber}</Text>
+          <Text style={styles.bold}>Date: {date}</Text>
         </View>
-        <View style={styles.signatureBlock}>
-          <Image style={styles.signatureImage} src="Signature.jpg" />
-          <Text style={styles.signatureName}>Jerom Jebamani</Text>
-          <Text>Vice-President</Text>
+        <Text style={styles.receiptTitle}>RECEIPT</Text>
+        <View style={styles.section}>
+          <Text style={styles.bold}>Received with thanks from:</Text>
+          <Text>{churchName}</Text>
         </View>
-        <View style={styles.signatureBlock}>
-          <Image style={styles.signatureImage} src="Signature.jpg" />
-          <Text style={styles.signatureName}>Alice Joel Ramanadhula</Text>
-          <Text>Secretary</Text>
+        <View style={styles.section}>
+          <Text style={styles.bold}>Towards:</Text>
+          <Text>Bombay Diocesan Youth Fellowship Council</Text>
+        </View>
+        <View style={styles.section}>
+          <Text style={styles.bold}>The sum of rupees:</Text>
+          <Text>{amount}</Text>
+        </View>
+        <View style={styles.section}>
+          <Text style={styles.bold}>Payment Method:</Text>
+          <Text>{paymentMethod}</Text>
+        </View>
+        <View style={styles.section}>
+          <Text style={styles.bold}>Transaction ID:</Text>
+          <Text>{transactionId}</Text>
+        </View>
+        <View style={styles.signatures}>
+          <View style={styles.signatureBlock}>
+            <Image style={styles.signatureImage} src="Signature.jpg" />
+            <Text style={styles.signatureName}>Daniel Jebadurai</Text>
+            <Text>President</Text>
+          </View>
+          <View style={styles.signatureBlock}>
+            <Image style={styles.signatureImage} src="Signature.jpg" />
+            <Text style={styles.signatureName}>Jerom Jebamani</Text>
+            <Text>Vice-President</Text>
+          </View>
+          <View style={styles.signatureBlock}>
+            <Image style={styles.signatureImage} src="Signature.jpg" />
+            <Text style={styles.signatureName}>Alice Joel Ramanadhula</Text>
+            <Text>Secretary</Text>
+          </View>
         </View>
       </View>
     </Page>
